@@ -2,6 +2,9 @@
 
 DEPENDS:append:qcom = " skales-native xxd-native"
 
+SRC_URI = "git://github.com/arduino/u-boot.git;protocol=https;branch=qcom-mainline"
+SRCREV = "f36e65b75a8352d92333401fbfc4d0bf3bd2a962"
+
 # Don't add extra dependencies for non-qcom machines and layers
 COMPILE_EXTRA_DEPENDS = ""
 COMPILE_EXTRA_DEPENDS:qcom = "virtual/kernel:do_deploy"
